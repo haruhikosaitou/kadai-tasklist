@@ -1,10 +1,8 @@
 <div class="row">
-  <div class="col-xs-12"></div>
-  <div class="col-sm-8 col-sm-offset-2"></div>
-  <div class="col-md-8 col-md-offset-2"></div>
-  <div class="col-lg-6 col-lg-offset-3"></div>
-</div>
-    <%= form_for(task) do |f| %>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6 col-sm-offset-2 col-md-offset-2 col-lg-offset-3">
+   <%= form_for(task) do |f| %>
+  </div>
+</div>    
       <% if task.errors.any? %>
         <div class="alert alert-warning">
           <ul>  
@@ -20,16 +18,16 @@
         <%= f.text_field :status, class: 'form-control' %>     
       </div>
     
-     <div class="form-group">
+      <div class="form-group">
         <%= f.label :content, 'タスク' %>
         <%= f.text_field :content, class: 'form-control' %>
-     </div>
+      </div>
      
-     <span class ="glyphicon glyphicon-file">
-       <%= f.submit '投稿', class: 'btn btn-primary' %>
-     </span>
-    
-   <% end %>
+      <span class ="glyphicon glyphicon-file">
+        <%= f.submit '投稿', class: 'btn btn-primary' %>
+      </span>
+     <% end %>
+  
 
 
 
